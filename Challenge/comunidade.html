@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style-com.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"> 
+    <title>AluraDEV - Comunidade</title>
+</head>
+<body class="estrutura">
+    <header class="cabecalho__principal">
+        <div class="cabecalho__logo">
+            <img src="Logo.png" alt="" class="cabecalho__logo--imagem">
+        </div>
+        <div class="cabecalho__pesquisa">
+            <input type="text" class="cabecalho__pesquisa--input" placeholder="Busque por algo">
+        </div>
+        <div class="cabecalho__perfil">
+            <div class="cabecalho__perfil--caixa">
+                <img class="cabecalho__perfil--foto" src="photo.jpeg" alt="">
+                <p class="cabecalho__perfil--nome">Giulivan</p>
+            </div>
+        </div>
+    </header>
+    <main class="conteudo">
+        <nav class="menu">
+            <h2 class="menu__titulo">Menu</h2>
+            <ul class="menu__lista">
+                <li class="menu__item item--editor">
+                    <img src="vector-editor.svg" alt="" class="menu__icone--editor">
+                    <a href="index.html" class="menu__item--link">
+                        Editor de código
+                    </a>
+                </li>
+                <li class="menu__item item--comunidade">
+                    <img src="vector-comunidade.svg" alt="" class="menu__icone--comunidade">
+                    <a href="comunidade.html" class="menu__item--link link--comunidade">
+                        Comunidade
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <section class="campo__codigo">
+            <div class="campo__borda">
+                <div class="campo__cabecalho">
+                    <span class="elipse-red"></span>
+                    <span class="elipse-yellow"></span>
+                    <span class="elipse-green"></span>
+                </div>
+                <textarea class="campo__codigo--digitavel" type="text">const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+
+                    const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+                    
+                    const unfold = (f, seed) => {
+                    const go = (f, seed, acc) => {
+                        const res = f(seed)
+                        return res ? go(f, res[1], acc.concat([res[0]])) : acc
+                    }
+                    return go(f, seed, [])
+                }
+                </textarea>  
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
